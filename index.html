@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0054)https://dlhboltara.github.io/siperdiboltara.github.io/ -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SI-PERDI | UPTD Persampahan DLH Bolaang Mongondow Utara</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="./SI-PERDI _ UPTD Persampahan DLH Bolaang Mongondow Utara_files/css2" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -232,8 +232,8 @@ footer{background:#060F1D;padding:36px 24px 20px;color:rgba(255,255,255,.45)}
 </head>
 <body>
 
-<div class="loader hidden" id="loader"><div class="spin"></div><div class="spin-lbl" id="spin-lbl">Memuat data...</div></div>
-<div class="toast" id="toast"></div>
+<div class="loader hidden" id="loader"><div class="spin"></div><div class="spin-lbl" id="spin-lbl">Memuat arsip dokumen...</div></div>
+<div class="toast" id="toast">✅ Data terbaru dimuat</div>
 
 <!-- TOPBAR -->
 <div class="topbar">
@@ -243,7 +243,7 @@ footer{background:#060F1D;padding:36px 24px 20px;color:rgba(255,255,255,.45)}
   </div>
   <div class="tb-right">
     <span><span class="live-dot"></span>Live Data</span>
-    <span>📅 <span id="tgl"></span></span>
+    <span>📅 <span id="tgl">21 Jun 2026</span></span>
     <span>🔒 Akses Terbatas</span>
   </div>
 </div>
@@ -257,14 +257,14 @@ footer{background:#060F1D;padding:36px 24px 20px;color:rgba(255,255,255,.45)}
     <div class="logo-box">♻️</div>
     <div class="logo-txt"><strong>DLH Bolaang Mongondow Utara</strong>Dinas Lingkungan Hidup</div>
   </div>
-  <div class="hero-content" id="hc">
+  <div class="hero-content" id="hc" style="opacity: 1; transform: translateY(0px); transition: 0.8s cubic-bezier(0.34, 1.2, 0.64, 1);">
     <div class="hero-eyebrow"><span class="pulse"></span>Dashboard Terintegrasi · Real-Time</div>
     <h1>♻️ SI-<span>PERDI</span></h1>
-    <p class="hero-sub">Sistem Informasi Perencanaan & Retribusi Digital</p>
+    <p class="hero-sub">Sistem Informasi Perencanaan &amp; Retribusi Digital</p>
     <p class="hero-meta">UPTD Persampahan <span class="sep">|</span> Analisis PAD <span class="sep">|</span> Kab. Bolaang Mongondow Utara</p>
     <div class="cta-row">
-      <a href="#" class="btn btn-gold" onclick="goPage('arsip');return false">📁 Arsip Dokumen</a>
-      <a href="#" class="btn btn-ghost" onclick="goPage('retribusi');return false">💳 Potensi Retribusi</a>
+      <a href="https://dlhboltara.github.io/siperdiboltara.github.io/#" class="btn btn-gold" onclick="goPage(&#39;arsip&#39;);return false">📁 Arsip Dokumen</a>
+      <a href="https://dlhboltara.github.io/siperdiboltara.github.io/#" class="btn btn-ghost" onclick="goPage(&#39;retribusi&#39;);return false">💳 Potensi Retribusi</a>
       <button class="btn btn-ghost" onclick="refreshDashboard()">🔄 Refresh</button>
     </div>
   </div>
@@ -272,52 +272,52 @@ footer{background:#060F1D;padding:36px 24px 20px;color:rgba(255,255,255,.45)}
 </section>
 
 <!-- ═══════════════════ PAGE: DASHBOARD ═══════════════════ -->
-<div id="page-dashboard" class="page active">
+<div id="page-dashboard" class="page">
   <div class="wrap">
     <div class="stats-section">
       <div class="sec-eyebrow">Ringkasan Data</div>
       <div class="sec-title">Statistik Kinerja Persampahan</div>
       <p class="sec-desc">Data diperbarui langsung dari Google Sheets setiap kali halaman dibuka.</p>
       <div class="kpi-grid">
-        <div class="kpi k1 fade d1">
+        <div class="kpi k1 fade d1 in">
           <div class="kpi-top"><div class="kpi-icon">📁</div><div class="chip c-blue">Arsip</div></div>
-          <div class="kpi-val" id="kpi-arsip">–</div>
+          <div class="kpi-val" id="kpi-arsip">5</div>
           <div class="kpi-lbl">Total Dokumen Arsip</div>
-          <div class="kpi-bar"><div class="kpi-fill" style="--w:75%"></div></div>
+          <div class="kpi-bar"><div class="kpi-fill" style="--w: 75%; width: 75%;"></div></div>
         </div>
-        <div class="kpi k2 fade d2">
+        <div class="kpi k2 fade d2 in">
           <div class="kpi-top"><div class="kpi-icon">🏘️</div><div class="chip c-teal">Aktif</div></div>
-          <div class="kpi-val" id="kpi-ret">–</div>
+          <div class="kpi-val" id="kpi-ret">14</div>
           <div class="kpi-lbl">Wajib Retribusi</div>
-          <div class="kpi-bar"><div class="kpi-fill" style="--w:60%"></div></div>
+          <div class="kpi-bar"><div class="kpi-fill" style="--w: 60%; width: 60%;"></div></div>
         </div>
-        <div class="kpi k3 fade d3">
-          <div class="kpi-top"><div class="kpi-icon">💰</div><div class="chip c-gold">PAD</div></div>
-          <div class="kpi-val" id="kpi-pad">–</div>
-          <div class="kpi-lbl">Potensi PAD / Bulan</div>
-          <div class="kpi-bar"><div class="kpi-fill" style="--w:82%"></div></div>
+        <div class="kpi k3 fade d3 in">
+          <div class="kpi-top"><div class="kpi-icon">💰</div><div class="chip c-gold">Terbayar</div></div>
+          <div class="kpi-val" id="kpi-pad">Rp 0</div>
+          <div class="kpi-lbl">Total Terbayar (Aktual)</div>
+          <div class="kpi-bar"><div class="kpi-fill" style="--w: 82%; width: 82%;"></div></div>
         </div>
-        <div class="kpi k4 fade d4">
-          <div class="kpi-top"><div class="kpi-icon">📸</div><div class="chip c-green">Bukti</div></div>
-          <div class="kpi-val" id="kpi-bukti">–</div>
-          <div class="kpi-lbl">Ada Bukti Bayar</div>
-          <div class="kpi-bar"><div class="kpi-fill" style="--w:50%"></div></div>
+        <div class="kpi k4 fade d4 in">
+          <div class="kpi-top"><div class="kpi-icon">⚠️</div><div class="chip c-blue">Tunggakan</div></div>
+          <div class="kpi-val" id="kpi-belum">Rp 0</div>
+          <div class="kpi-lbl">Total Tunggakan</div>
+          <div class="kpi-bar"><div class="kpi-fill" style="--w: 50%; width: 50%;"></div></div>
         </div>
       </div>
     </div>
 
     <div class="status-row">
-      <div class="sc fade d1">
+      <div class="sc fade d1 in">
         <div class="sc-ring rg">✅</div>
-        <div><div class="sc-val" id="st-lunas">–</div><div class="sc-lbl">Lunas</div><div class="sc-sub sg">↑ Pembayaran terkonfirmasi</div></div>
+        <div><div class="sc-val" id="st-lunas">9</div><div class="sc-lbl">Lunas</div><div class="sc-sub sg">↑ Pembayaran terkonfirmasi</div></div>
       </div>
-      <div class="sc fade d2">
+      <div class="sc fade d2 in">
         <div class="sc-ring ry">⏳</div>
-        <div><div class="sc-val" id="st-proses">–</div><div class="sc-lbl">Dalam Proses</div><div class="sc-sub sy">⚠ Sedang diproses</div></div>
+        <div><div class="sc-val" id="st-proses">3</div><div class="sc-lbl">Dalam Proses</div><div class="sc-sub sy">⚠ Sedang diproses</div></div>
       </div>
-      <div class="sc fade d3">
+      <div class="sc fade d3 in">
         <div class="sc-ring rr">❌</div>
-        <div><div class="sc-val" id="st-belum">–</div><div class="sc-lbl">Belum Bayar</div><div class="sc-sub sr">↓ Perlu tindak lanjut</div></div>
+        <div><div class="sc-val" id="st-belum">2</div><div class="sc-lbl">Belum Bayar</div><div class="sc-sub sr">↓ Perlu tindak lanjut</div></div>
       </div>
     </div>
 
@@ -326,14 +326,14 @@ footer{background:#060F1D;padding:36px 24px 20px;color:rgba(255,255,255,.45)}
       <div class="sec-title">Akses Layanan Digital</div>
       <p class="sec-desc">Pilih layanan untuk mengakses informasi dan input data persampahan daerah.</p>
       <div class="menu-grid">
-        <div class="menu-card card-blue fade d1" onclick="goPage('arsip')">
+        <div class="menu-card card-blue fade d1 in" onclick="goPage(&#39;arsip&#39;)">
           <div class="mc-blob"></div>
           <div class="mc-top"><div class="mc-icon">📁</div><div><div class="mc-badge">Layanan 01</div><div class="mc-heading">Arsip Dokumen</div></div></div>
           <p class="mc-desc">Penyimpanan digital dokumen teknis, pengadaan, dan operasional persampahan. Terstruktur dan dapat diunduh dari Google Drive.</p>
           <div class="mc-icon-row"><div class="ic-pill">📄</div><div class="ic-pill">📂</div><div class="ic-pill">🗃️</div><div class="ic-pill">📋</div></div>
           <button class="btn btn-blue">📁 Buka Arsip Dokumen</button>
         </div>
-        <div class="menu-card card-green fade d2" onclick="goPage('retribusi')">
+        <div class="menu-card card-green fade d2 in" onclick="goPage(&#39;retribusi&#39;)">
           <div class="mc-blob"></div>
           <div class="mc-top"><div class="mc-icon">💳</div><div><div class="mc-badge">Layanan 02</div><div class="mc-heading">Potensi Retribusi</div></div></div>
           <p class="mc-desc">Input data retribusi baru, upload bukti bayar, dan lihat rekap data retribusi secara real-time dari Google Sheets.</p>
@@ -346,37 +346,110 @@ footer{background:#060F1D;padding:36px 24px 20px;color:rgba(255,255,255,.45)}
 </div>
 
 <!-- ═══════════════════ PAGE: ARSIP DOKUMEN ═══════════════════ -->
-<div id="page-arsip" class="page">
+<div id="page-arsip" class="page active">
   <div class="wrap">
-    <button class="back-btn" onclick="goPage('dashboard')">← Kembali ke Dashboard</button>
+    <button class="back-btn" onclick="goPage(&#39;dashboard&#39;)">← Kembali ke Dashboard</button>
     <div class="sec-eyebrow">Manajemen Dokumen</div>
     <div class="sec-title">Arsip Dokumen Perencanaan</div>
-    <p class="sec-desc" id="arsip-count">Memuat dokumen dari Google Drive...</p>
+    <p class="sec-desc" id="arsip-count">5 dokumen tersimpan · Google Drive Cloud</p>
     <div class="filter-bar" id="arsip-filter">
-      <button class="filter-btn active" onclick="filterArsip(this,'semua')">Semua</button>
-      <button class="filter-btn" onclick="filterArsip(this,'Perencanaan')">Perencanaan</button>
-      <button class="filter-btn" onclick="filterArsip(this,'Retribusi')">Retribusi</button>
-      <button class="filter-btn" onclick="filterArsip(this,'Laporan')">Laporan</button>
-      <button class="filter-btn" onclick="filterArsip(this,'Regulasi')">Regulasi</button>
+      <button class="filter-btn active" onclick="filterArsip(this,&#39;semua&#39;)">Semua</button>
+      <button class="filter-btn" onclick="filterArsip(this,&#39;Perencanaan&#39;)">Perencanaan</button>
+      <button class="filter-btn" onclick="filterArsip(this,&#39;Retribusi&#39;)">Retribusi</button>
+      <button class="filter-btn" onclick="filterArsip(this,&#39;Laporan&#39;)">Laporan</button>
+      <button class="filter-btn" onclick="filterArsip(this,&#39;Regulasi&#39;)">Regulasi</button>
     </div>
     <div class="search-wrap"><input type="text" placeholder="Cari dokumen…" oninput="searchArsip(this.value)"></div>
     <div class="arsip-grid" id="arsip-grid" style="margin-bottom:48px">
-      <div style="text-align:center;padding:40px;color:var(--muted);grid-column:1/-1">Memuat arsip...</div>
+    <div class="arsip-card" onclick="bukaLink(&#39;https://drive.google.com/drive/folders/1vJbXAgGRqjbzVXmC5kKqKsTKsY3g0x3X?usp=sharing&#39;)">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <div style="width:40px;height:40px;border-radius:10px;background:#FEE2E2;display:flex;align-items:center;justify-content:center;font-size:20px">📄</div>
+        <div style="font-size:13px;font-weight:700;flex:1;line-height:1.4;color:var(--navy)">Dokumen Perencanaan</div>
+      </div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap">
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(0,121,107,.1);color:var(--teal)">2026</span>
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(249,168,37,.12);color:#B45309">Perencanaan</span>
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(46,125,50,.1);color:var(--green)">Aktif</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--light)">
+        <span style="font-size:10px;color:var(--muted);font-family:monospace">PDF · 2.4 MB</span>
+        <button onclick="event.stopPropagation();bukaLink(&#39;https://drive.google.com/drive/folders/1vJbXAgGRqjbzVXmC5kKqKsTKsY3g0x3X?usp=sharing&#39;)" style="font-size:11px;font-weight:700;color:var(--teal);border:1px solid rgba(0,121,107,.2);padding:5px 12px;border-radius:20px;background:none;cursor:pointer">⬇ Buka</button>
+      </div>
     </div>
+    <div class="arsip-card" onclick="bukaLink(&#39;https://drive.google.com/drive/folders/1wIylAmLO9-2WWmEZBNoZ6-_xTFq-6l8D?usp=sharing&#39;)">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <div style="width:40px;height:40px;border-radius:10px;background:#FEE2E2;display:flex;align-items:center;justify-content:center;font-size:20px">📄</div>
+        <div style="font-size:13px;font-weight:700;flex:1;line-height:1.4;color:var(--navy)">SK</div>
+      </div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap">
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(0,121,107,.1);color:var(--teal)">2026</span>
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(249,168,37,.12);color:#B45309">Regulasi</span>
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(46,125,50,.1);color:var(--green)">Aktif</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--light)">
+        <span style="font-size:10px;color:var(--muted);font-family:monospace">PDF · 1.1 MB</span>
+        <button onclick="event.stopPropagation();bukaLink(&#39;https://drive.google.com/drive/folders/1wIylAmLO9-2WWmEZBNoZ6-_xTFq-6l8D?usp=sharing&#39;)" style="font-size:11px;font-weight:700;color:var(--teal);border:1px solid rgba(0,121,107,.2);padding:5px 12px;border-radius:20px;background:none;cursor:pointer">⬇ Buka</button>
+      </div>
+    </div>
+    <div class="arsip-card" onclick="bukaLink(&#39;https://drive.google.com/drive/folders/1JIX9T08I0UWP0v1ZQ8oWUpzFaMFfdL9I?usp=sharing&#39;)">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <div style="width:40px;height:40px;border-radius:10px;background:#FEE2E2;display:flex;align-items:center;justify-content:center;font-size:20px">📄</div>
+        <div style="font-size:13px;font-weight:700;flex:1;line-height:1.4;color:var(--navy)">PERDA</div>
+      </div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap">
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(0,121,107,.1);color:var(--teal)">2026</span>
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(249,168,37,.12);color:#B45309">Regulasi</span>
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(46,125,50,.1);color:var(--green)">Aktif</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--light)">
+        <span style="font-size:10px;color:var(--muted);font-family:monospace">PDF · 0.8 MB</span>
+        <button onclick="event.stopPropagation();bukaLink(&#39;https://drive.google.com/drive/folders/1JIX9T08I0UWP0v1ZQ8oWUpzFaMFfdL9I?usp=sharing&#39;)" style="font-size:11px;font-weight:700;color:var(--teal);border:1px solid rgba(0,121,107,.2);padding:5px 12px;border-radius:20px;background:none;cursor:pointer">⬇ Buka</button>
+      </div>
+    </div>
+    <div class="arsip-card" onclick="bukaLink(&#39;https://drive.google.com/drive/folders/1tXPe73buM_n5G2HAuUYIFKBA6cpFr0Rd?usp=sharing&#39;)">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <div style="width:40px;height:40px;border-radius:10px;background:#FEE2E2;display:flex;align-items:center;justify-content:center;font-size:20px">📄</div>
+        <div style="font-size:13px;font-weight:700;flex:1;line-height:1.4;color:var(--navy)">PERBUP</div>
+      </div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap">
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(0,121,107,.1);color:var(--teal)">2026</span>
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(249,168,37,.12);color:#B45309">Regulasi</span>
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(46,125,50,.1);color:var(--green)">Aktif</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--light)">
+        <span style="font-size:10px;color:var(--muted);font-family:monospace">PDF · 1.7 MB</span>
+        <button onclick="event.stopPropagation();bukaLink(&#39;https://drive.google.com/drive/folders/1tXPe73buM_n5G2HAuUYIFKBA6cpFr0Rd?usp=sharing&#39;)" style="font-size:11px;font-weight:700;color:var(--teal);border:1px solid rgba(0,121,107,.2);padding:5px 12px;border-radius:20px;background:none;cursor:pointer">⬇ Buka</button>
+      </div>
+    </div>
+    <div class="arsip-card" onclick="bukaLink(&#39;https://drive.google.com/file/d/1ICeL8pHkbMLXbnVq85Wrx_p_qDJHubXW/view?usp=sharing&#39;)">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <div style="width:40px;height:40px;border-radius:10px;background:#FEE2E2;display:flex;align-items:center;justify-content:center;font-size:20px">📄</div>
+        <div style="font-size:13px;font-weight:700;flex:1;line-height:1.4;color:var(--navy)">Dokumen Masterplan Persampahan</div>
+      </div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap">
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(0,121,107,.1);color:var(--teal)">2026</span>
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(249,168,37,.12);color:#B45309">Dokumen</span>
+        <span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(46,125,50,.1);color:var(--green)">Aktif</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--light)">
+        <span style="font-size:10px;color:var(--muted);font-family:monospace">PDF · 5.2 MB</span>
+        <button onclick="event.stopPropagation();bukaLink(&#39;https://drive.google.com/file/d/1ICeL8pHkbMLXbnVq85Wrx_p_qDJHubXW/view?usp=sharing&#39;)" style="font-size:11px;font-weight:700;color:var(--teal);border:1px solid rgba(0,121,107,.2);padding:5px 12px;border-radius:20px;background:none;cursor:pointer">⬇ Buka</button>
+      </div>
+    </div></div>
   </div>
 </div>
 
 <!-- ═══════════════════ PAGE: POTENSI RETRIBUSI ═══════════════════ -->
 <div id="page-retribusi" class="page">
   <div class="wrap">
-    <button class="back-btn" onclick="goPage('dashboard')">← Kembali ke Dashboard</button>
+    <button class="back-btn" onclick="goPage(&#39;dashboard&#39;)">← Kembali ke Dashboard</button>
     <div class="sec-eyebrow">Layanan Retribusi</div>
     <div class="sec-title">Potensi Retribusi Persampahan</div>
     <p class="sec-desc">Data tersinkron langsung dengan Google Sheets secara real-time.</p>
 
     <div class="tab-bar">
-      <button class="tab-btn active" id="tabbtn-input" onclick="switchTab('input')">✏️ Input Data Baru</button>
-      <button class="tab-btn" id="tabbtn-view" onclick="switchTab('view')">📋 View Data</button>
+      <button class="tab-btn active" id="tabbtn-input" onclick="switchTab(&#39;input&#39;)">✏️ Input Data Baru</button>
+      <button class="tab-btn" id="tabbtn-view" onclick="switchTab(&#39;view&#39;)">📋 View Data</button>
     </div>
 
     <!-- TAB: INPUT -->
@@ -396,6 +469,7 @@ footer{background:#060F1D;padding:36px 24px 20px;color:rgba(255,255,255,.45)}
           <div class="fg"><label>Status Pembayaran</label>
             <select id="f-status"><option value="Dalam Proses">Dalam Proses</option><option value="Lunas">Lunas</option><option value="Belum Bayar">Belum Bayar</option></select>
           </div>
+          <div class="fg"><label>📅 Bulan Terbayar (0–12)</label><input type="number" id="f-bulan" placeholder="0" min="0" max="12" value="0" style="font-weight:700;color:var(--green)"></div>
           <div class="fg half"><label>Petugas Pendata</label><input type="text" id="f-petugas" value="Husnul"></div>
           <div class="fg"><label>Keterangan</label><input type="text" id="f-ket" placeholder="Catatan tambahan"></div>
           <div class="fg full">
@@ -407,7 +481,7 @@ footer{background:#060F1D;padding:36px 24px 20px;color:rgba(255,255,255,.45)}
               <div class="uz-sub">JPG, PNG, WEBP · Maks 5MB</div>
             </div>
             <div class="preview-box" id="prev-box">
-              <img id="prev-img" src="" alt="">
+              <img id="prev-img" src="https://dlhboltara.github.io/siperdiboltara.github.io/" alt="">
               <div class="preview-foot"><span class="preview-name" id="prev-name"></span><button class="preview-rm" onclick="hapusFoto()">✕ Hapus</button></div>
             </div>
           </div>
@@ -431,8 +505,8 @@ footer{background:#060F1D;padding:36px 24px 20px;color:rgba(255,255,255,.45)}
       <div class="search-wrap"><input type="text" placeholder="Cari nama, jenis, alamat…" oninput="filterTable(this.value)"></div>
       <div class="tbl-wrap">
         <table>
-          <thead><tr><th>#</th><th>ID</th><th>Tanggal</th><th>Nama Wajib Retribusi</th><th>Jenis</th><th>Alamat</th><th>Tarif / Bulan</th><th>Status</th><th>Bukti Bayar</th><th>Petugas</th><th>Aksi</th></tr></thead>
-          <tbody id="tbl-body"><tr><td colspan="11" style="text-align:center;padding:40px;color:var(--muted)">Memuat data...</td></tr></tbody>
+          <thead><tr><th>#</th><th>ID</th><th>Tanggal</th><th>Nama Wajib Retribusi</th><th>Jenis</th><th>Alamat</th><th>Tarif / Bulan</th><th>Bln Bayar</th><th>Jml Dibayar</th><th>Status</th><th>Bukti Bayar</th><th>Petugas</th><th>Aksi</th></tr></thead>
+          <tbody id="tbl-body"><tr><td colspan="13" style="text-align:center;padding:40px;color:var(--muted)">Memuat data...</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -440,7 +514,7 @@ footer{background:#060F1D;padding:36px 24px 20px;color:rgba(255,255,255,.45)}
 </div>
 
 <!-- WAVE -->
-<div class="wave"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="height:60px"><path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,15 1440,30 L1440,60 L0,60 Z" fill="#060F1D"/></svg></div>
+<div class="wave"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="height:60px"><path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,15 1440,30 L1440,60 L0,60 Z" fill="#060F1D"></path></svg></div>
 
 <!-- FOOTER -->
 <footer>
@@ -448,11 +522,11 @@ footer{background:#060F1D;padding:36px 24px 20px;color:rgba(255,255,255,.45)}
     <div class="f-top">
       <div class="f-brand">
         <div class="f-icon">♻️</div>
-        <div><div class="f-name">SI-PERDI</div><div class="f-sub">Sistem Informasi Perencanaan & Retribusi Digital<br>UPTD Persampahan · Dinas Lingkungan Hidup Bolaang Mongondow Utara</div></div>
+        <div><div class="f-name">SI-PERDI</div><div class="f-sub">Sistem Informasi Perencanaan &amp; Retribusi Digital<br>UPTD Persampahan · Dinas Lingkungan Hidup Bolaang Mongondow Utara</div></div>
       </div>
       <div style="text-align:right;font-size:12px;line-height:2">
         <div class="f-ver">⚙️ Versi 4.0</div><br>
-        <div>Sektor Perencanaan & Analisis PAD</div>
+        <div>Sektor Perencanaan &amp; Analisis PAD</div>
         <div>Pemerintah Kab. Bolaang Mongondow Utara</div>
       </div>
     </div>
@@ -531,8 +605,8 @@ function applyStats(s){
   const r=s.retribusi, a=s.arsip;
   $("kpi-arsip").textContent=a.total;
   $("kpi-ret").textContent=r.total;
-  $("kpi-pad").textContent="Rp "+fmtM(r.totalPotensi);
-  $("kpi-bukti").textContent=r.adaBukti||0;
+  $("kpi-pad").textContent="Rp "+fmtM(r.totalDibayar||0);
+  $("kpi-belum").textContent="Rp "+fmtM(r.totalBelum||0);
   $("st-lunas").textContent=r.lunas;
   $("st-proses").textContent=r.proses;
   $("st-belum").textContent=r.belum;
@@ -599,7 +673,7 @@ function renderTable(q=""){
   const f=allRet.filter(d=>!q||d.nama.toLowerCase().includes(q.toLowerCase())||d.jenis.toLowerCase().includes(q.toLowerCase())||(d.alamat||"").toLowerCase().includes(q.toLowerCase()));
   $("tbl-info").textContent=`${f.length} data · tersinkron Google Sheets`;
   const tb=$("tbl-body");
-  if(!f.length){ tb.innerHTML='<tr><td colspan="11" style="text-align:center;padding:40px;color:var(--muted)">Tidak ada data</td></tr>'; return; }
+  if(!f.length){ tb.innerHTML='<tr><td colspan="13" style="text-align:center;padding:40px;color:var(--muted)">Tidak ada data</td></tr>'; return; }
   tb.innerHTML=f.map((d,i)=>`
     <tr>
       <td style="color:var(--muted);font-size:11px">${i+1}</td>
@@ -609,11 +683,14 @@ function renderTable(q=""){
       <td>${d.jenis}</td>
       <td style="font-size:12px;color:var(--muted)">${d.alamat||"–"}</td>
       <td style="font-weight:700;white-space:nowrap">Rp ${fmt(d.tarif)}</td>
+      <td style="text-align:center;font-weight:700;color:var(--green)">${d.bulanDibayar||0} bln</td>
+      <td style="text-align:center;font-weight:700;color:var(--teal)">Rp ${fmt((d.tarif||0)*(d.bulanDibayar||0))}</td>
       <td><span class="badge ${sc[d.status]||'b-gold'}">${d.status}</span></td>
       <td>${d.linkBukti?`<a class="foto-link" href="${d.linkBukti}" target="_blank">📸 Lihat</a>`:'<span style="color:#CBD5E1;font-size:11px">–</span>'}</td>
       <td style="font-size:12px">${d.petugas||"–"}</td>
       <td style="white-space:nowrap">
         <button class="act-btn act-edit" onclick="ubahStatus('${d.id}')">✏ Status</button>
+        <button class="act-btn" style="background:rgba(0,121,107,.08);color:var(--teal);border:1.5px solid rgba(0,121,107,.18)" onclick="ubahBulan('${d.id}','${d.bulanDibayar||0}')">📅 Bln</button>
         <button class="act-btn act-del" onclick="hapusData('${d.id}')">🗑</button>
       </td>
     </tr>`).join("");
@@ -643,7 +720,7 @@ async function submitForm(){
   const btn=$("btn-save"); btn.disabled=true; btn.textContent="Menyimpan...";
   showLoad("Menyimpan ke Google Sheets...");
   try{
-    const res=await apiPost({action:"addRetribusi",data:{nama,jenis,alamat,tarif:parseInt(tarif),status:$("f-status").value,petugas:$("f-petugas").value||"Petugas",keterangan:$("f-ket").value}});
+    const res=await apiPost({action:"addRetribusi",data:{nama,jenis,alamat,tarif:parseInt(tarif),bulanDibayar:parseInt($("f-bulan").value)||0,status:$("f-status").value,petugas:$("f-petugas").value||"Petugas",keterangan:$("f-ket").value}});
     if(res.status!=="ok"){ toast("Gagal: "+res.message,"terr"); return; }
     if(fotoB64&&fotoFile){
       showLoad("Mengupload foto ke Google Drive...");
@@ -669,6 +746,19 @@ async function ubahStatus(id){
   }catch(e){ toast("Error","terr"); } finally{ hideLoad(); }
 }
 
+async function ubahBulan(id, currentBulan){
+  const input = prompt(`Update Bulan Dibayar untuk ${id}\nSaat ini: ${currentBulan} bulan\nMasukkan jumlah bulan terbayar (0–12):`);
+  if(input===null) return;
+  const bulan = parseInt(input);
+  if(isNaN(bulan)||bulan<0||bulan>12){ toast("⚠ Masukkan angka 0–12","terr"); return; }
+  showLoad("Memperbarui bulan dibayar...");
+  try{
+    const res=await apiPost({action:"updateBulan",id,bulan});
+    if(res.status==="ok"){ toast("✅ "+res.message,"tok"); await loadRetribusi(); await refreshDashboard(); }
+    else toast("Gagal: "+res.message,"terr");
+  }catch(e){ toast("Error","terr"); } finally{ hideLoad(); }
+}
+
 async function hapusData(id){
   if(!confirm("Hapus data ini dari Google Sheets?")) return;
   showLoad("Menghapus...");
@@ -681,8 +771,8 @@ async function hapusData(id){
 
 function exportCSV(){
   if(!allRet.length){ toast("Tidak ada data","tinf"); return; }
-  const h=["ID","Tanggal","Nama","Jenis","Alamat","Tarif","Status","Bukti Bayar","Petugas"];
-  const rows=allRet.map(d=>[d.id,d.tanggal,d.nama,d.jenis,d.alamat,d.tarif,d.status,d.linkBukti||"–",d.petugas].map(v=>`"${v||""}"`).join(","));
+  const h=["ID","Tanggal","Nama","Jenis","Alamat","Tarif (Rp/bln)","Bln Dibayar","Jml Dibayar (Rp)","Status","Bukti Bayar","Petugas"];
+  const rows=allRet.map(d=>[d.id,d.tanggal,d.nama,d.jenis,d.alamat,d.tarif,d.bulanDibayar||0,(d.tarif||0)*(d.bulanDibayar||0),d.status,d.linkBukti||"–",d.petugas].map(v=>`"${v||""}"`).join(","));
   const a=document.createElement("a");
   a.href="data:text/csv;charset=utf-8,"+encodeURIComponent([h.join(","),...rows].join("\n"));
   a.download="SIPERDI_Retribusi_"+new Date().toISOString().split("T")[0]+".csv";
@@ -690,9 +780,10 @@ function exportCSV(){
 }
 
 function resetForm(){
-  ["f-nama","f-jenis","f-tarif","f-alamat","f-ket"].forEach(id=>{ const el=$(id); if(el) el.value=""; });
+  ["f-nama","f-jenis","f-tarif","f-alamat","f-ket"].forEach(id=>{ const el=$(id); if(el) el.value=""; }); const fb=$("f-bulan"); if(fb) fb.value="0";
   $("f-status").value="Dalam Proses"; $("f-petugas").value="Husnul"; hapusFoto();
 }
 </script>
-</body>
-</html>
+
+
+</body></html>
