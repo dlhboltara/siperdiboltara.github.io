@@ -550,7 +550,7 @@ const fmtM = n => { const v=parseInt(n||0); return v>=1000000 ? (v/1000000).toFi
 function showLoad(t="Memuat..."){ $("spin-lbl").textContent=t; $("loader").classList.remove("hidden"); }
 function hideLoad(){ $("loader").classList.add("hidden"); }
 function toast(msg,type="tok"){ const t=$("toast"); t.textContent=msg; t.className="toast "+type+" show"; setTimeout(()=>t.className="toast",3200); }
-async function apiGet(a){ const r=await fetch(`${API}?action=${a}`); return r.json(); }
+async function apiGet(a){ const r=await fetch(`${API}?action=${a}&t=${Date.now()}`,{cache:'no-store'}); return r.json(); }
 async function apiPost(b){ const r=await fetch(API,{method:"POST",body:JSON.stringify(b)}); return r.json(); }
 
 // ── NAVIGASI HALAMAN ──
